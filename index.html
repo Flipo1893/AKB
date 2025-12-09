@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Informatik Rätsel – System-Key Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+ 
+<div class="container">
+    <h1>System-Key Challenge</h1>
+    <br>
+    <br>
+    <h2>Spielerklärung</h2>
+    <p>
+    Um das digitale Schloss zu öffnen, müssen drei Informatik-Rätsel gelöst werden.
+    Jedes Rätsel ergibt eine Zahl.
+    Wenn alle drei Zahlen richtig eingegeben werden, wird der Zugang freigeschaltet
+    und der „System-Key“ erscheint als Beweis, dass die Mission erfolgreich abgeschlossen wurde.
+    </p>
+    <br>
+    <div class="quiz-item">
+        <h2> Wie viele Bits passen in ein Byte?</h2>
+        <input type="number" id="q1" placeholder="Zahl eingeben">
+    </div>
+ 
+    <div class="quiz-item">
+        <h2> Wie viele Ziffern hat das Binärsystem?</h2>
+        <input type="number" id="q2" placeholder="Zahl eingeben">
+    </div>
+ 
+    <div class="quiz-item">
+        <h2> Python-Print-Rätsel</h2>
+        <pre>
+x = 3
+if x < 2:
+    print(1)
+elif x < 5:
+    print(2)
+else:
+    print(3)
+        </pre>
+        <input type="number" id="q3" placeholder="Ausgabe eingeben">
+    </div>
+ 
+    <button onclick="checkAnswers()">Code prüfen</button>
+ 
+    <div id="result"></div>
+</div>
+ 
+</body>
+</html>

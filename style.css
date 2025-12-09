@@ -1,0 +1,149 @@
+/* ===== Global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #050816;
+    color: #e5e7eb;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+ 
+/* ===== Container ===== */
+.container {
+    width: 90%;
+    max-width: 750px;
+    background: #111827;
+    padding: 32px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+ 
+/* ===== Headings ===== */
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #60a5fa;
+}
+ 
+p {
+    margin-bottom: 10px;
+    color: #cbd5f5;
+    font-size: 14px;
+}
+ 
+h2 {
+    font-size: 20px;
+    color: #93c5fd;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+ 
+/* ===== Quiz-Blocks ===== */
+.quiz-item {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    margin: 22px 0;
+}
+ 
+/* Code-Beispiel */
+pre {
+    background: #020617;
+    padding: 12px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 8px 0 14px 0;
+    color: #e5e7eb;
+    font-size: 14px;
+    border: 1px solid rgba(148,163,184,0.3);
+}
+ 
+/* ===== Inputs ===== */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    background: #020617;
+    border: 1px solid #4b5563;
+    color: #e5e7eb;
+    font-size: 16px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+ 
+input::placeholder {
+    color: #9ca3af;
+}
+ 
+input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    background: #020617;
+    box-shadow: 0 0 0 2px rgba(96,165,250,0.4);
+}
+ 
+/* ===== Button ===== */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+ 
+button:hover {
+    background: #2563eb;
+    box-shadow: 0 0 14px rgba(37,99,235,0.6);
+}
+ 
+button:active {
+    transform: translateY(1px);
+}
+ 
+/* ===== Result Box ===== */
+#result {
+    margin-top: 20px;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 12px;
+    display: none;
+    font-weight: 600;
+    text-align: center;
+    animation: fadeIn 0.25s ease-out;
+}
+ 
+.success {
+    background: #16a34a;
+    color: #ecfdf3;
+}
+ 
+.error {
+    background: #dc2626;
+    color: #fef2f2;
+}
+ 
+/* ===== Animation ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
