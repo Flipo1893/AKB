@@ -11,6 +11,7 @@ function checkAnswers() {
     let resultBox = document.getElementById("result");
  
     if (correct1 && correct2 && correct3) {
+    resultBox.style.background = "#32CD32";
     resultBox.style.display = "block";
     resultBox.innerHTML = "Richtig! Der Code zum Öffnen lautet:<br><span class='unlock-code'>5801</span>";
     resultBox.classList.remove("error");
