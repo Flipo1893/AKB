@@ -170,18 +170,34 @@ button:active {
 }
 
 /* (Dein bestehender Style für das Icon) */
+/* Das runde blaue Info-Icon */
 .info-icon {
-    /* ... deine Farben etc ... */
-    display: flex;       /* Damit das 'i' zentriert ist */
+    /* Damit das 'i' genau in der Mitte steht */
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 24px;         /* Feste Breite */
-    height: 24px;        /* Feste Höhe */
+
+    /* Feste Grösse für den Kreis */
+    width: 24px;
+    height: 24px;
+
+    /* HIER KOMMT DIE FARBE: Dein schönes Blau */
+    background-color: #3b82f6;
+    color: white; /* Das 'i' selbst ist weiss */
+
+    /* Macht es kreisrund */
+    border-radius: 50%;
+
+    /* Schriftart und Mauszeiger */
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    user-select: none; /* Verhindert Markieren beim Klicken */
 }
 
-/* Entfernt das Standard-Dreieck in manchen Browsern (z.B. Chrome) */
-.info-icon::-webkit-details-marker {
-    display: none;
+/* Hover-Effekt: Wird etwas heller beim Drüberfahren */
+.info-icon:hover {
+    background-color: #60a5fa;
 }
 
 /* Hover-Effekt für das Icon 
