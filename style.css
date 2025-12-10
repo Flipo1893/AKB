@@ -169,21 +169,13 @@ button:active {
     flex-shrink: 0; /* Verhindert das Schrumpfen! */
 }
 
-/* (Dein bestehender Style für das Icon) */
-/* Das runde blaue Info-Icon */
 .info-icon {
-    /* Damit das 'i' genau in der Mitte steht */
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* Feste Grösse für den Kreis */
     width: 24px;
     height: 24px;
-
-    /* HIER KOMMT DIE FARBE: Dein schönes Blau */
-    background-color: #3b82f6;
-    color: white; /* Das 'i' selbst ist weiss */
+    color: white;
 
     /* Macht es kreisrund */
     border-radius: 50%;
@@ -198,6 +190,7 @@ button:active {
 /* Hover-Effekt: Wird etwas heller beim Drüberfahren */
 .info-icon:hover {
     background-color: #60a5fa;
+    transition: 0.5s;
 }
 
 /* Hover-Effekt für das Icon 
