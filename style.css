@@ -148,35 +148,35 @@ button:active {
     }
 }
 /* 1. Überschrift und Icon nebeneinander anordnen */
+/* 1. Flexbox Anpassung */
 .question-header {
     display: flex;
-    justify-content: space-between; /* Schiebt Text nach links, Icon nach rechts */
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-    position: relative; /* Wichtig für das Popup */
+    position: relative;
+    gap: 10px; /* Kleiner Abstand zwischen Text und Icon */
 }
 
-/* Die Überschrift darf nicht zu breit werden, damit Platz fürs Icon bleibt */
+/* 2. WICHTIG: Der Text darf sich den Platz nehmen... */
 .question-header h2 {
-    margin: 0;
-    max-width: 85%; /* Platz für das Icon lassen */
+    flex: 1;      /* Nimm den verfügbaren Platz */
+    margin: 0;    /* Keine störenden Ränder */
+    width: 100%;  /* Sicherheitshalber */
 }
 
-/* 2. Das runde Info-Icon gestalten */
+/* 3. WICHTIG: ...aber das Icon darf NICHT gequetscht werden */
+.info-popup {
+    flex-shrink: 0; /* Verhindert das Schrumpfen! */
+}
+
+/* (Dein bestehender Style für das Icon) */
 .info-icon {
-    display: flex;
+    /* ... deine Farben etc ... */
+    display: flex;       /* Damit das 'i' zentriert ist */
     justify-content: center;
     align-items: center;
-    width: 24px;
-    height: 24px;
-    background-color: #3b82f6; /* Dein Blau */
-    color: white;
-    border-radius: 50%; /* Macht es kreisrund */
-    font-weight: bold;
-    font-family: monospace;
-    cursor: pointer;
-    user-select: none;
-    list-style: none; /* Entfernt das Standard-Dreieck */
+    width: 24px;         /* Feste Breite */
+    height: 24px;        /* Feste Höhe */
 }
 
 /* Entfernt das Standard-Dreieck in manchen Browsern (z.B. Chrome) */
