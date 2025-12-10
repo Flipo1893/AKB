@@ -27,3 +27,19 @@ function checkAnswers() {
         resultBox.style.background = "#ef4444";
     }
 }
+// Event-Listener für Klicks auf der gesamten Seite
+document.addEventListener('click', function(event) {
+    // Suche alle Info-Popups
+    const allDetails = document.querySelectorAll('.info-popup');
+
+    allDetails.forEach(function(detail) {
+        // Prüfen: Ist dieses Popup gerade offen?
+        if (detail.hasAttribute('open')) {
+            // Prüfen: Hat der Nutzer AUSSERHALB dieses Elements geklickt?
+            if (!detail.contains(event.target)) {
+                // Dann schliesse es (Attribut entfernen)
+                detail.removeAttribute('open');
+            }
+        }
+    });
+});

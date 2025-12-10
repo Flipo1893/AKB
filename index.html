@@ -21,19 +21,33 @@
     und der „System-Key“ erscheint als Beweis, dass die Mission erfolgreich abgeschlossen wurde.
     </p>
     <br>
-    <div class="quiz-item">
-        <h2> Wie viele Bits passen in ein Byte?</h2>
-        <input type="number" id="q1" placeholder="Zahl eingeben">
+   <div class="quiz-item">
+    <div class="question-header">
+        <h2>Wie viele Bits passen in ein Byte?</h2>
+        
+        <details class="info-popup">
+            <summary class="info-icon">i</summary>
+            <div class="popup-text">
+            2^? = 256            
+        </div>
+        </details>
     </div>
+    <input type="number" id="q1" placeholder="Zahl eingeben">
+</div>
  
-    <div class="quiz-item">
-        <h2> Wie viele Ziffern hat das Binärsystem?</h2>
-        <input type="number" id="q2" placeholder="Zahl eingeben">
+   <div class="quiz-item">
+    
+    <div class="question-header">
+        <h2>Python-Print-Rätsel</h2>
+
+        <details class="info-popup">
+            <summary class="info-icon">i</summary>
+            <div class="popup-text">
+                Gehe den Code Zeile für Zeile durch.
+            </div>
+        </details>
     </div>
- 
-    <div class="quiz-item">
-        <h2> Python-Print-Rätsel</h2>
-        <pre>
+    <pre>
 x = 3
 if x < 2:
     print(1)
@@ -41,12 +55,22 @@ elif x < 5:
     print(2)
 else:
     print(3)
-        </pre>
-        <input type="number" id="q3" placeholder="Welche Zahl wir mit print ausgegeben?">
-    </div>
+    </pre>
+    <input type="number" id="q3" placeholder="Welche Zahl wir mit print ausgegeben?">
+</div>
   <div class="quiz-item">
+    
+    <div class="question-header">
         <h2>Wie viele Kombinationen muss der Computer im schlimmsten Fall testen?</h2>
-<pre>
+
+        <details class="info-popup">
+            <summary class="info-icon">i</summary>
+            <div class="popup-text">
+                Rechne die Möglichkeiten pro Stelle mal:
+            </div>
+        </details>
+    </div>
+    <pre>
 Ein Hacker möchte ein digitales Schloss knacken.
 Dafür setzt er auf einen Brute-Force-Angriff:
 Der Computer testet nacheinander jede mögliche Zahlenkombination,
@@ -56,13 +80,24 @@ Sicherheitsmechanismus:
 Das Schloss besitzt einen 3-stelligen Code,
 jede Stelle ist eine Ziffer 0–9
 (z. B. 000, 123, 999).
-</pre>
-<input type="number" id="q4" placeholder="Zahl eingeben">
-    </div>
+    </pre>
+    <input type="number" id="q4" placeholder="Zahl eingeben">
+
+</div>
  
   <div class="quiz-item">
-        <h2>Welche Angriffsmethoden ist gesucht?</h2>
-<pre>
+    
+    <div class="question-header">
+        <h2>Welche Angriffsmethode ist gesucht?</h2>
+
+        <details class="info-popup">
+            <summary class="info-icon">i</summary>
+            <div class="popup-text">
+            Es wird nichts gestohlen (wie bei Phishing) und kein Virus installiert. Der Server wird einfach nur "verstopft".
+            </div>
+        </details>
+    </div>
+    <pre>
 Ein Webserver ist plötzlich nicht mehr erreichbar, 
 weil er gleichzeitig mit Millionen von sinnlosen 
 Anfragen von verschiedenen Computern weltweit 
@@ -73,10 +108,9 @@ Antwortmöglichkeiten:
 2. SQL-Injection
 3. DDoS-Angriff
 4. Trojaner
-</pre>
-<input type="number" id="q5" placeholder="1,2,3 oder 4 eingeben">
-    </div>
- 
+    </pre>
+    <input type="number" id="q5" placeholder="1, 2, 3 oder 4 eingeben">
+</div>
     <button onclick="checkAnswers()">Code prüfen</button>
  
     <div id="result"></div>
